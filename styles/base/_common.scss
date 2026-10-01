@@ -1,23 +1,38 @@
+@use "variables";
+html {
+  background-color: var(--bg);
+  background-image: radial-gradient(1.5px 1.5px at 12% 18%, rgb(255, 255, 255) 50%, transparent 51%), radial-gradient(1px 1px at 28% 72%, rgb(255, 255, 255) 50%, transparent 51%),
+    radial-gradient(1.5px 1.5px at 46% 34%, rgb(207, 214, 255) 50%, transparent 51%), radial-gradient(1px 1px at 63% 86%, rgb(255, 255, 255) 50%, transparent 51%),
+    radial-gradient(1.5px 1.5px at 78% 22%, rgb(255, 255, 255) 50%, transparent 51%), radial-gradient(1px 1px at 90% 58%, rgb(207, 214, 255) 50%, transparent 51%), radial-gradient(1px 1px at 6% 90%, rgb(255, 255, 255) 50%, transparent 51%),
+    radial-gradient(60% 50% at 85% 10%, rgba(124, 92, 255, 0.28), transparent 70%), radial-gradient(50% 45% at 10% 100%, rgba(46, 230, 197, 0.16), transparent 70%);
+}
 body {
   font-family: "Inter", sans-serif;
   transition: background 0.3s, color 0.3s;
   min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-}
-
-.container {
-  max-width: 1440px;
+  max-width: 1600px;
   width: 100%;
   margin: 0 auto;
-  padding: 0 40px;
+  padding: 0 20px;
+  display: flex;
+  flex-direction: column;
+  color: var(--text);
 }
 
- 
+body.no-scroll {
+  overflow: hidden;
+}
 
- 
-
- 
-
- 
- 
+[hidden] {
+  display: none !important;
+}
+.board {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--gap);
+}
+.main {
+  width: min(100%, var(--board-size));
+  margin: 0 auto;
+}

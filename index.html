@@ -1,13 +1,164 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Memory game</title>
+    <link rel="stylesheet" href="styles/style.css" />
+    <title>Игра на память</title>
   </head>
   <body>
-    <header></header>
-    <main></main>
-    <footer></footer>
+    <header class="header">
+      <h1 class="header__title">Космо-мемори</h1>
+      <div class="header__actions">
+        <button class="btn btn--primary" type="button" id="demo-new-game">Новая игра</button>
+        <button class="btn" type="button" id="demo-leaderboard">Таблица лидеров</button>
+      </div>
+    </header>
+
+    <main class="main">
+      <section class="stats">
+        <div class="stat">
+          <span class="stat__label">Ходы</span>
+          <span class="stat__value">0</span>
+        </div>
+        <div class="stat">
+          <span class="stat__label">Пары</span>
+          <span class="stat__value">0 из 8</span>
+        </div>
+      </section>
+      <div class="board" id="demo-board">
+        <button class="card card--flipped card--matched" type="button" aria-label="Карточка 1">
+          <div class="card__inner">
+            <div class="card__face card__face--back"></div>
+            <div class="card__face card__face--front">
+              <img class="card__image" src="assets/cards/astronaut.svg" alt="Астронавт" />
+            </div>
+          </div>
+        </button>
+        <button class="card" type="button" aria-label="Карточка 2">
+          <div class="card__inner">
+            <div class="card__face card__face--back"></div>
+            <div class="card__face card__face--front">
+              <img class="card__image" src="assets/cards/rocket.svg" alt="Ракета" />
+            </div>
+          </div>
+        </button>
+        <button class="card" type="button" aria-label="Карточка 3">
+          <div class="card__inner">
+            <div class="card__face card__face--back"></div>
+            <div class="card__face card__face--front">
+              <img class="card__image" src="assets/cards/ufo.svg" alt="НЛО" />
+            </div>
+          </div>
+        </button>
+        <button class="card card--flipped" type="button" aria-label="Карточка 4">
+          <div class="card__inner">
+            <div class="card__face card__face--back"></div>
+            <div class="card__face card__face--front">
+              <img class="card__image" src="assets/cards/saturn.svg" alt="Сатурн" />
+            </div>
+          </div>
+        </button>
+
+        <button class="card" type="button" aria-label="Карточка 5">
+          <div class="card__inner">
+            <div class="card__face card__face--back"></div>
+            <div class="card__face card__face--front">
+              <img class="card__image" src="assets/cards/satellite.svg" alt="Спутник" />
+            </div>
+          </div>
+        </button>
+        <button class="card" type="button" aria-label="Карточка 6">
+          <div class="card__inner">
+            <div class="card__face card__face--back"></div>
+            <div class="card__face card__face--front">
+              <img class="card__image" src="assets/cards/moon.svg" alt="Луна" />
+            </div>
+          </div>
+        </button>
+        <button class="card" type="button" aria-label="Карточка 7">
+          <div class="card__inner">
+            <div class="card__face card__face--back"></div>
+            <div class="card__face card__face--front">
+              <img class="card__image" src="assets/cards/comet.svg" alt="Комета" />
+            </div>
+          </div>
+        </button>
+        <button class="card" type="button" aria-label="Карточка 8">
+          <div class="card__inner">
+            <div class="card__face card__face--back"></div>
+            <div class="card__face card__face--front">
+              <img class="card__image" src="assets/cards/earth.svg" alt="Земля" />
+            </div>
+          </div>
+        </button>
+
+        <button class="card" type="button" aria-label="Карточка 9">
+          <div class="card__inner">
+            <div class="card__face card__face--back"></div>
+            <div class="card__face card__face--front">
+              <img class="card__image" src="assets/cards/earth.svg" alt="Земля" />
+            </div>
+          </div>
+        </button>
+        <button class="card" type="button" aria-label="Карточка 10">
+          <div class="card__inner">
+            <div class="card__face card__face--back"></div>
+            <div class="card__face card__face--front">
+              <img class="card__image" src="assets/cards/comet.svg" alt="Комета" />
+            </div>
+          </div>
+        </button>
+        <button class="card" type="button" aria-label="Карточка 11">
+          <div class="card__inner">
+            <div class="card__face card__face--back"></div>
+            <div class="card__face card__face--front">
+              <img class="card__image" src="assets/cards/moon.svg" alt="Луна" />
+            </div>
+          </div>
+        </button>
+        <button class="card" type="button" aria-label="Карточка 12">
+          <div class="card__inner">
+            <div class="card__face card__face--back"></div>
+            <div class="card__face card__face--front">
+              <img class="card__image" src="assets/cards/satellite.svg" alt="Спутник" />
+            </div>
+          </div>
+        </button>
+
+        <button class="card" type="button" aria-label="Карточка 13">
+          <div class="card__inner">
+            <div class="card__face card__face--back"></div>
+            <div class="card__face card__face--front">
+              <img class="card__image" src="assets/cards/saturn.svg" alt="Сатурн" />
+            </div>
+          </div>
+        </button>
+        <button class="card" type="button" aria-label="Карточка 14">
+          <div class="card__inner">
+            <div class="card__face card__face--back"></div>
+            <div class="card__face card__face--front">
+              <img class="card__image" src="assets/cards/ufo.svg" alt="НЛО" />
+            </div>
+          </div>
+        </button>
+        <button class="card" type="button" aria-label="Карточка 15">
+          <div class="card__inner">
+            <div class="card__face card__face--back"></div>
+            <div class="card__face card__face--front">
+              <img class="card__image" src="assets/cards/rocket.svg" alt="Ракета" />
+            </div>
+          </div>
+        </button>
+        <button class="card card--flipped card--matched" type="button" aria-label="Карточка 16">
+          <div class="card__inner">
+            <div class="card__face card__face--back"></div>
+            <div class="card__face card__face--front">
+              <img class="card__image" src="assets/cards/astronaut.svg" alt="Астронавт" />
+            </div>
+          </div>
+        </button>
+      </div>
+    </main>
   </body>
 </html>

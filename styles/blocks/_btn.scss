@@ -1,0 +1,36 @@
+@use "../base/variables";
+
+.btn {
+  min-height: 44px;
+  padding: 10px 18px;
+  font: inherit;
+  font-weight: 600;
+  color: var(--text);
+  background: var(--surface-2);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: 12px;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.1s, border-color 0.2s;
+
+  &:hover {
+    background: #2d3780;
+    border-color: rgba(255, 255, 255, 0.3);
+  }
+  &:active {
+    transform: translateY(1px);
+  }
+}
+
+.btn--primary {
+  background: var(--accent);
+  border-color: transparent;
+  &:hover {
+    background: var(--accent-hover);
+  }
+}
+
+.btn:focus-visible,
+.card:focus-visible {
+  outline: 3px solid var(--teal);
+  outline-offset: 3px;
+}
