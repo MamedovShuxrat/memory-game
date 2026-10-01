@@ -129,9 +129,15 @@ body.no-scroll {
 }
 
 .stats {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.stats__wrapper {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: var(--gap);
+  margin-bottom: 20px;
 }
 
 .stat {
@@ -142,7 +148,6 @@ body.no-scroll {
   display: flex;
   flex-direction: column;
   gap: 2px;
-  margin-bottom: 20px;
 }
 .stat__label {
   font-size: 0.8rem;
