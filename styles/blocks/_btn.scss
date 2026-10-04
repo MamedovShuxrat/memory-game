@@ -22,11 +22,7 @@
 }
 
 .btn--primary {
-  background: var(--accent);
   border-color: transparent;
-  &:hover {
-    background: var(--accent-hover);
-  }
 }
 
 .btn:focus-visible,

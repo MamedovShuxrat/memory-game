@@ -182,11 +182,7 @@ body.no-scroll {
 }
 
 .btn--primary {
-  background: var(--accent);
   border-color: transparent;
-}
-.btn--primary:hover {
-  background: var(--accent-hover);
 }
 
 .btn:focus-visible,
