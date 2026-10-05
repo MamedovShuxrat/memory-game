@@ -1,0 +1,25 @@
+@use "../base/variables";
+
+.header {
+  padding: 20px 0;
+
+  &__title {
+    margin: 0;
+    font-size: clamp(1.25rem, 5vw, 1.75rem);
+    font-weight: 700;
+    letter-spacing: 0.01em;
+    text-align: center;
+  }
+
+  &__actions {
+    margin-top: 20px;
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+    gap: 8px;
+  }
+
+  &__actions .btn {
+    white-space: nowrap;
+  }
+}

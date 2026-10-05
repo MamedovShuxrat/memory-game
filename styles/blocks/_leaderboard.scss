@@ -1,0 +1,32 @@
+@use "../base/variables";
+
+.leaderboard {
+  width: 100%;
+  border-collapse: collapse;
+  font-variant-numeric: tabular-nums;
+
+  th,
+  td {
+    padding: 8px 10px;
+    text-align: center;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  th {
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--text-muted);
+  }
+
+  tbody tr:first-child td {
+    color: var(--amber);
+    font-weight: 700;
+  }
+
+  &__empty {
+    margin: 12px 0;
+    color: var(--text-muted);
+  }
+}

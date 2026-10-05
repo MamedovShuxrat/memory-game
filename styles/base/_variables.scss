@@ -1,0 +1,17 @@
+:root {
+  --bg: #0a0f26;
+  --bg-2: #141a3d;
+  --surface: #1a2150;
+  --surface-2: #232b66;
+  --text: #eef1ff;
+  --text-muted: #9aa3d6;
+  --accent: #7c5cff;
+  --accent-hover: #6a49f0;
+  --teal: #2ee6c5;
+  --amber: #ffb84d;
+  --danger: #ff5d73;
+  --radius: 16px;
+  --gap: clamp(8px, 2.4vw, 16px);
+  --flip-time: 0.5s;
+  --board-size: min(560px, max(260px, calc(100dvh - 250px)));
+}
