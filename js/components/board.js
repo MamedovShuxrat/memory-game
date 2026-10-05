@@ -8,3 +8,7 @@ export function createBoard(deck) {
 
   return createElement("div", { className: "board", attrs: { id: "board" } }, ...cards);
 }
+
+export function renderBoard(board, deck) {
+  board.replaceChildren(...deck.map(createCard));
+}

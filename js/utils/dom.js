@@ -14,6 +14,11 @@ export function createElement(tag, options = {}, ...children) {
       element.setAttribute(name, value);
     }
   }
+
+  if (options.onClick) {
+    element.addEventListener("click", options.onClick);
+  }
+
   if (children.length > 0) element.append(...children);
   return element;
 }

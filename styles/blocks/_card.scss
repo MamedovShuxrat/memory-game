@@ -76,10 +76,6 @@
   box-shadow: 0 0 0 2px rgba(46, 230, 197, 0.25), 0 0 22px rgba(46, 230, 197, 0.45);
 }
 
-.board--locked .card:not(.card--flipped) {
-  cursor: not-allowed;
-}
-
 @keyframes rounded {
   0% {
     transform: rotate(0deg);
